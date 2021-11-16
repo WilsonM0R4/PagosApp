@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.PayerFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPayerNameCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/payer_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPayerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="136dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPayerSurnameCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/payer_surname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPayerNameCont" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPayerSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="136dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPayerEmailCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/payer_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPayerSurnameCont" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPayerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="136dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvDocType"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/payer_doc_type"
+        android:minHeight="48dp"
+        android:text="CC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPayerEmailCont"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/payer_document"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDocType"
+        app:layout_constraintTop_toBottomOf="@+id/etPayerEmailCont">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPayerDocument"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="136dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

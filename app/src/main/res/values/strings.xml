@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Pagos App</string>
+    <string name="payer">Pagador</string>
+    <string name="payer_name">Nombre</string>
+    <string name="payer_surname">Apellido</string>
+    <string name="payer_email">Email</string>
+    <string name="payer_doc_type">Tipo de documento</string>
+    <string name="payer_document">Documento</string>
+    <string name="btn_next">Siguiente</string>
+    <string name="btn_prev">Anterior</string>
+    <string name="payment_reference">Referencia</string>
+    <string name="payment_description">Descripción</string>
+    <string name="payment_amount">Cantidad</string>
+    <string name="payment_currency">Moneda</string>
+    <string name="payment_total">Total</string>
+    <string name="payment_method">Método de pago</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="payer_data">Datos del pagador</string>
+    <string name="payment_data">Datos del pago</string>
+</resources>
