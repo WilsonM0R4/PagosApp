@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/plus_icon.xml" value="0.22" />
         <entry key="app/src/main/res/drawable/plus_shape.xml" value="0.278125" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23278985507246377" />
         <entry key="app/src/main/res/layout/activity_payment.xml" value="0.21557971014492755" />
         <entry key="app/src/main/res/layout/fragment_payer.xml" value="0.21557971014492755" />

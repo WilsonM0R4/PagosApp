@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment_nav"
+    app:startDestination="@id/payerFragment">
+
+    <fragment
+        android:id="@+id/payerFragment"
+        android:name="com.example.pagosapp.views.PayerFragment"
+        android:label="fragment_payer"
+        tools:layout="@layout/fragment_payer" >
+        <action
+            android:id="@+id/action_payerFragment_to_paymentDataFragment"
+            app:destination="@id/paymentDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentDataFragment"
+        android:name="com.example.pagosapp.views.PaymentDataFragment"
+        android:label="fragment_payment_data"
+        tools:layout="@layout/fragment_payment_data" >
+        <action
+            android:id="@+id/action_paymentDataFragment_to_selectMethodFragment"
+            app:destination="@id/selectMethodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectMethodFragment"
+        android:name="com.example.pagosapp.views.SelectMethodFragment"
+        android:label="fragment_select_method"
+        tools:layout="@layout/fragment_select_method" >
+        <action
+            android:id="@+id/action_selectMethodFragment_to_paymentResumeFragment"
+            app:destination="@id/paymentResumeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentResumeFragment"
+        android:name="com.example.pagosapp.views.PaymentResumeFragment"
+        android:label="fragment_payment_resume"
+        tools:layout="@layout/fragment_payment_resume" >
+        <action
+            android:id="@+id/action_paymentResumeFragment_to_paymentResultFragment"
+            app:destination="@id/paymentResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentResultFragment"
+        android:name="com.example.pagosapp.views.PaymentResultFragment"
+        android:label="fragment_payment_result"
+        tools:layout="@layout/fragment_payment_result" >
+        <action
+            android:id="@+id/action_paymentResultFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.pagosapp.views.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

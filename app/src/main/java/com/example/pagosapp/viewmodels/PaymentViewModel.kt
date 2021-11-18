@@ -40,7 +40,7 @@ class PaymentViewModel : ViewModel(), PaymentResponseCallback {
             "", "", "", "", "",
             AmountModel("",0),
             ConversionModel(AmountModel("",0), AmountModel("",0), 0),
-            "", "", "", false, "","","",
+            "", "", "", false, "","",DiscountModel("","",0,0, ""),
             ProcessorFieldsModel("", ""))
             //AdditionalModel("","",CreditModel("","",
                // "",0),0.0,0.0, 0.0,

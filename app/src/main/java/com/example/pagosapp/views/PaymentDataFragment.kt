@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.pagosapp.R
 import com.example.pagosapp.common.SharedData
 import com.example.pagosapp.databinding.FragmentPaymentDataBinding
 import com.example.pagosapp.models.AmountModel
@@ -51,8 +50,10 @@ class PaymentDataFragment : Fragment() {
         val reference = binding.etPaymentReference.text.toString()
         val description =binding.etPaymentDescription.text.toString()
         val currency = binding.etPaymentCurrency.text.toString()
-        val total = binding.etPaymentTotal.text.toString().toInt()
-        val amountModel = AmountModel(currency, total)
+        val amountModel = AmountModel(
+            currency,
+            binding.etPaymentTotal.text.toString().toIntOrNull() ?: 0
+        )
         SharedData.paymentModel = PaymentModel(reference, description, amountModel)
     }
 

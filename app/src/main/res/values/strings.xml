@@ -2,7 +2,7 @@
     <string name="app_name">Pagos App</string>
     <string name="payer">Pagador</string>
     <string name="payer_name">Nombre</string>
-    <string name="payer_surname">Apellido</string>
+    <string name="payer_surname">Apellido </string>
     <string name="payer_email">Email</string>
     <string name="payer_doc_type">Tipo de documento</string>
     <string name="payer_document">Documento</string>
@@ -13,9 +13,26 @@
     <string name="payment_amount">Cantidad</string>
     <string name="payment_currency">Moneda</string>
     <string name="payment_total">Total</string>
-    <string name="payment_method">Método de pago</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="payment_method">Método de pago: %1$s</string>
+    <string name="franchise">Franquicia: %1$s</string>
+    <string name="issuer_name">Nombre del emisor: %1$s</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="payer_data">Datos del pagador</string>
     <string name="payment_data">Datos del pago</string>
+    <string name="currency_text">Currency</string>
+    <string name="amount_text">Amount</string>
+    <string name="reference_text">Referencia: %1$s</string>
+    <string name="date_text">fecha</string>
+    <string name="date_text_ph">Fecha: %1$s</string>
+    <string name="message_text">mensaje</string>
+    <string name="message_text_ph">Mensaje: %1$s</string>
+    <string name="transaction_status_text">Estado de la transacción</string>
+    <string name="transaction_status_text_ph">Estado de la transacción: %1$s</string>
+    <string name="btn_search_title">buscar</string>
+    <string name="fab_new_transaction">Nueva transacción</string>
+    <string name="btn_finish">Finalizar</string>
+    <string name="transaction_detail_title">Detalles de la transacción</string>
+    <string name="transaction_date">Fecha de transacción: %1$s</string>
+    <string name="internal_reference">Referencia interna: %1$s</string>
+    <string name="btn_back">Volver</string>
 </resources>
