@@ -8,10 +8,11 @@
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23278985507246377" />
         <entry key="app/src/main/res/layout/activity_payment.xml" value="0.21557971014492755" />
+        <entry key="app/src/main/res/layout/card_item.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_payer.xml" value="0.21557971014492755" />
         <entry key="app/src/main/res/layout/fragment_payment_data.xml" value="0.21557971014492755" />
         <entry key="app/src/main/res/layout/fragment_payment_result.xml" value="0.21557971014492755" />
-        <entry key="app/src/main/res/layout/fragment_payment_resume.xml" value="0.21557971014492755" />
+        <entry key="app/src/main/res/layout/fragment_payment_resume.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_select_method.xml" value="0.21557971014492755" />
         <entry key="app/src/main/res/layout/payer.xml" value="0.23278985507246377" />
         <entry key="app/src/main/res/layout/transaction_item.xml" value="0.22" />

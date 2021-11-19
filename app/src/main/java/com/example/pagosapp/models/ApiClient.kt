@@ -33,7 +33,7 @@ class ApiClient {
 
     fun sendPayment(request:PayRequestModel) {
 
-            val response = getClient().create(GatewayProcess::class.java).sendProcess(request).enqueue(object:Callback<ResponseModel> {
+            getClient().create(GatewayProcess::class.java).sendProcess(request).enqueue(object:Callback<ResponseModel> {
 
                 override fun onFailure(call: Call<ResponseModel>, t: Throwable) {
                     Log.e("Call Error", "Ha fallado el servicio")
@@ -63,7 +63,7 @@ class ApiClient {
     }
 
     fun getTransactions(queryModel: QueryModel) {
-        val response = getClient().create(GatewayProcess::class.java).getTransactions(queryModel).enqueue(object:Callback<QueryResponseModel> {
+        getClient().create(GatewayProcess::class.java).getTransactions(queryModel).enqueue(object:Callback<QueryResponseModel> {
 
             override fun onFailure(call: Call<QueryResponseModel>, t: Throwable) {
                 Log.e("Call Error", "Ha fallado el servicio")

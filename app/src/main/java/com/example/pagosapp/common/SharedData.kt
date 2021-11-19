@@ -9,7 +9,7 @@ class SharedData {
     companion object {
         lateinit var payerModel : PayerModel
         lateinit var paymentModel: PaymentModel
-        lateinit var instrumentModel: InstrumentModel
+        var instrumentModel: InstrumentModel? = null
     }
 
 }

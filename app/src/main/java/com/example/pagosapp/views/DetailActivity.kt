@@ -29,7 +29,7 @@ class DetailActivity : AppCompatActivity() {
             transaction.reference)
         binding.tvInternalReference.text = String.format(getString(R.string.internal_reference),
             transaction.internalReference)
-        binding.tvPaymentMethod.text = String.format(getString(R.string.payment_method),
+        binding.tvPaymentMethod.text = String.format(getString(R.string.payment_method_ph),
             transaction.paymentMethod)
         binding.tvFranchise.text = String.format(getString(R.string.franchise),
             transaction.franchiseName)

@@ -40,7 +40,7 @@ class PaymentResultFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentPaymentResultBinding.inflate(inflater, container, false)
         return binding.root
@@ -48,13 +48,13 @@ class PaymentResultFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.paymentResponse.observe(this, Observer {
+        viewModel.paymentResponse.observe(this, {
             binding.tvDate.text = it.status.date
             binding.tvMessage.text = it.status.message
             binding.tvReason.text = it.status.reason
             binding.progressBar1.visibility = View.GONE
         })
-        viewModel.sendPayment(SharedData.payerModel, SharedData.paymentModel, SharedData.instrumentModel)
+        viewModel.sendPayment(SharedData.payerModel, SharedData.paymentModel, SharedData.instrumentModel!!)
     }
 
     companion object {

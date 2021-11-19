@@ -5,9 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pagosapp.R
+import com.example.pagosapp.adapters.CardAdapter
+import com.example.pagosapp.common.Commons
 import com.example.pagosapp.common.SharedData
 import com.example.pagosapp.databinding.FragmentSelectMethodBinding
+import com.example.pagosapp.interfaces.CardItemClickListener
 import com.example.pagosapp.models.CardModel
 import com.example.pagosapp.models.InstrumentModel
 
@@ -39,20 +44,30 @@ class SelectMethodFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentSelectMethodBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val adapter = CardAdapter()
+        adapter.setCardItemClickListener(object:CardItemClickListener{
+            override fun onCardSelected(card : CardModel) {
+                SharedData.instrumentModel = InstrumentModel(card)
+                Toast.makeText(context, "Tarjeta seleccionada", Toast.LENGTH_SHORT).show()
+            }
+        })
+        binding.rvCards.layoutManager = LinearLayoutManager(context)
+        binding.rvCards.adapter = adapter
+    }
+
     override fun onPause() {
         super.onPause()
-        val cardNumber = binding.tvCardNumber.text.toString()
-        val cardExpiration = binding.tvCardExpiration.text.toString()
-        val cardCVV = binding.tvCardCVV.text.toString()
-        val installments = 1//binding.tvCardInstallments.toString().toIntOrNull()
-        val cardModel = CardModel(cardNumber, cardExpiration, cardCVV, installments)
-        SharedData.instrumentModel = InstrumentModel(cardModel)
+        if (SharedData.instrumentModel == null) {
+            SharedData.instrumentModel = InstrumentModel(Commons.getTestCards()[0])
+        }
     }
 
     companion object {

@@ -13,7 +13,8 @@
     <string name="payment_amount">Cantidad</string>
     <string name="payment_currency">Moneda</string>
     <string name="payment_total">Total</string>
-    <string name="payment_method">Método de pago: %1$s</string>
+    <string name="payment_method">Método de pago</string>
+    <string name="payment_method_ph">Método de pago: %1$s</string>
     <string name="franchise">Franquicia: %1$s</string>
     <string name="issuer_name">Nombre del emisor: %1$s</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>

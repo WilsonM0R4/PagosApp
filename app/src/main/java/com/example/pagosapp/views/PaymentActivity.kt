@@ -56,7 +56,10 @@ class PaymentActivity : AppCompatActivity() {
     override fun onBackPressed() {
 
         when (frm) {
-            frag5 -> frm = frag6
+            frag5 -> {
+                frm = frag4
+                binding.btnNext.text = resources.getText(R.string.btn_next)
+            }
             frag4 -> frm = frag3
             frag3 -> frm = frag2
             frag2 -> frm = frag

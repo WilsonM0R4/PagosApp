@@ -14,8 +14,7 @@ import android.text.format.Formatter.formatIpAddress
 import androidx.core.content.ContentProviderCompat
 
 import androidx.core.content.ContentProviderCompat.requireContext
-
-
+import com.example.pagosapp.models.CardModel
 
 
 class Commons {
@@ -54,6 +53,21 @@ class Commons {
 
         fun getUserAgent(): String {
             return "Android"
+        }
+
+        fun getTestCards() : ArrayList<CardModel> {
+            val card1 = CardModel("4111111111111111", "11/24", "369", 1)
+            val card2 = CardModel("400558 00 00 00 0040", "12/24", "148", 1)
+            val card3 = CardModel("542400 00 00 00 0015", "10/24", "257", 1)
+            val card4 = CardModel("466666 66 66 66 6669", "08/24", "453", 1)
+
+            val array = ArrayList<CardModel>()
+            array.add(card1)
+            array.add(card2)
+            array.add(card3)
+            array.add(card4)
+
+            return array
         }
     }
 

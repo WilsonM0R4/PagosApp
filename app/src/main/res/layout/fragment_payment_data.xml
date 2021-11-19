@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/payment_reference"
         android:layout_margin="4dp"
+        android:imeOptions="actionNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,7 +20,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPaymentReference"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -29,6 +31,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/payment_description"
         android:layout_margin="4dp"
+        android:imeOptions="actionNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etPaymentReferenceCont">
@@ -36,7 +39,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPaymentDescription"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:imeOptions="actionNext"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,6 +72,7 @@
             android:hint="@string/payment_currency"
             android:layout_weight="70"
             android:layout_margin="4dp"
+            android:imeOptions="actionNext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etPaymentReferenceCont">
@@ -74,7 +80,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPaymentCurrency"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,6 +93,7 @@
             android:hint="@string/payment_total"
             android:layout_weight="30"
             android:layout_margin="4dp"
+            android:imeOptions="actionDone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etPaymentReferenceCont">
@@ -92,7 +101,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPaymentTotal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

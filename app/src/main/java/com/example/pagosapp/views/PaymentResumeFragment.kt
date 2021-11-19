@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.pagosapp.R
+import com.example.pagosapp.common.SharedData
 import com.example.pagosapp.databinding.FragmentPaymentResumeBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,10 +37,28 @@ class PaymentResumeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentPaymentResumeBinding.inflate(inflater, container,false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.tvCardCVVResume.text = SharedData.instrumentModel!!.card.cvv
+        binding.tvCardNumberResume.text = SharedData.instrumentModel!!.card.number
+        binding.tvCardExpirationResume.text = SharedData.instrumentModel!!.card.expiration
+        binding.tvCardInstallmentsResume.text = SharedData.instrumentModel!!.card.installments.toString()
+        binding.tvPayerName.text = SharedData.payerModel.name
+        binding.tvPayerSurname.text = SharedData.payerModel.surname
+        binding.tvPayerDocType.text = SharedData.payerModel.documentType
+        binding.tvPayerDocument.text = SharedData.payerModel.document
+        binding.tvPayerEmail.text = SharedData.payerModel.email
+        binding.tvPaymentRef.text = SharedData.paymentModel.reference
+        binding.tvPaymentDesc.text = SharedData.paymentModel.description
+        binding.tvPaymentCurrency.text = SharedData.paymentModel.amount.currency
+        binding.tvPaymentTotal.text = SharedData.paymentModel.amount.total.toString()
     }
 
     companion object {
